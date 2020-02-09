@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Życzeniomat Cybercom</title>
+</head>
+<body>
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+
+	<div class="logo">
+		<img src="https://www.cybercom.com/static/cybercom/img/cybercom_logo.png"/>
+	</div>
+	<h1>
+		Życzeniomat Cybercomowy
+	</h1>
+	<div class="header">
+		Wpisz życzenia do wysłania i pociśnij guzior
+	</div>
+
+	<form>    
+	    <div class="group" align="center">      
+	      <input type="text" required id="wish-input">
+	      <span class="highlight"></span>
+	      <span class="bar"></span>
+	      <label>Życzenia</label>
+	    </div>
+
+	    <button class="btn" type="button" onclick="startSending()">
+		<span>Wyślij</span>
+	</button>
+	</form>
+
+	<div id="progress-bar" hidden="true">
+		<progress id="progress-bar"/>
+	</div>
+<br>
+	<div id="progress-complete" hidden="true">
+		Wysłanoooo!
+	</div>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/7.8.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/7.8.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.8.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+	
+</body>
+<script src="js/input.js"></script>
+</html>
